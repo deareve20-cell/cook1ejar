@@ -49,12 +49,6 @@ body {
     animation: floating 3s ease-in-out infinite;
 }
 
-@keyframes floating {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-}
-
 .sub-container {
     display: none;
     background: url('assets/260317/sub.png') no-repeat center center;
@@ -81,7 +75,8 @@ body {
     align-items: center;
     overflow: hidden;
     height: 800px;
-    position: relative; 
+    position: relative;
+    animation: floating 3s ease-in-out infinite;
 }
 .sub-right {
     width: 300px;
@@ -92,6 +87,7 @@ body {
     overflow: hidden;
     height: 850px;
     position: relative; 
+    animation: floating 3s ease-in-out infinite;
 }
 
 .sub-center {
@@ -153,4 +149,10 @@ body {
 .sub-bottom .btn img {
     width: 100%;
     height: 100%;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
 }
