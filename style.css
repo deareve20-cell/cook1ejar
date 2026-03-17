@@ -1,6 +1,10 @@
 body {
     margin: 0;
+    padding: 0;
+    width: 100vw;
     height: 100vh;
+    background-color: #000; 
+    overflow: hidden; /* 배율 조절 시 생길 수 있는 스크롤바 방지 */
 }
 ::-webkit-scrollbar {
     width: 16px;
@@ -17,7 +21,6 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 100%;
     position: relative; 
 }
 .main-container.show {
@@ -35,7 +38,6 @@ body {
     pointer-events: none; 
     mix-blend-mode: screen;
 }
-
 .center-img-area {
     background: url('assets/260317/main-center-img.png') no-repeat center center;
     width: 476px;
@@ -48,7 +50,6 @@ body {
     z-index: 2; 
     animation: floating 3s ease-in-out infinite;
 }
-
 .sub-container {
     display: none;
     background: url('assets/260317/sub.png') no-repeat center center;
@@ -56,10 +57,17 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 100%;
     position: relative; 
     width: 100%;
 }
+.main-container, .sub-container {
+    /* 스크립트에서 제어하므로 기존 height: 100% 등을 width/height 1920/1080으로 고정 */
+    width: 1920px;
+    height: 1080px;
+    display: none;
+    /* 이하 기존 속성 유지 */
+}
+
 .sub-container.show {
     display: flex;
     flex-direction: row;
