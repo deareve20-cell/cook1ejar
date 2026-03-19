@@ -1,9 +1,6 @@
 body {
     margin: 0;
     height: 100vh;
-    cursor:
-        url('./assets/cursor/cursor-default.png') 0 0,
-        auto;
 }
 ::-webkit-scrollbar {
     width: 16px;
@@ -21,7 +18,7 @@ body {
     align-items: center;
     overflow: hidden;
     height: 100%;
-    position: relative;
+    position: relative; 
 }
 .main-container.show {
     display: flex;
@@ -33,9 +30,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    pointer-events: none;
+    object-fit: cover; 
+    z-index: 1; 
+    pointer-events: none; 
     mix-blend-mode: screen;
 }
 
@@ -46,12 +43,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* ✏️ 호버 커서 이미지 경로: assets/cursor/cursor-pointer.png */
-    cursor:
-        url('./assets/cursor/cursor-pointer.png') 0 0,
-        pointer;
-    position: relative;
-    z-index: 2;
+    cursor: pointer;
+    position: relative; 
+    z-index: 2; 
     animation: floating 3s ease-in-out infinite;
 }
 
@@ -63,14 +57,14 @@ body {
     align-items: center;
     overflow: hidden;
     height: 100%;
-    position: relative;
+    position: relative; 
     width: 100%;
 }
 .sub-container.show {
     display: flex;
     flex-direction: row;
-    padding: 0 60px;
-    box-sizing: border-box;
+    padding: 0 60px; 
+    box-sizing: border-box; 
 }
 
 .sub-left {
@@ -92,11 +86,7 @@ body {
     align-items: center;
     overflow: hidden;
     height: 850px;
-<<<<<<< HEAD
     position: relative; 
-=======
-    position: relative;
->>>>>>> origin
     animation: floating 3s ease-in-out infinite;
 }
 
@@ -109,11 +99,7 @@ body {
     align-items: center;
     box-sizing: border-box;
     padding-bottom: 50px;
-<<<<<<< HEAD
     box-sizing: border-box; 
-=======
-    box-sizing: border-box;
->>>>>>> origin
 }
 
 .sub-top {
@@ -121,51 +107,44 @@ body {
     background: url('assets/260317/sub-top.png') no-repeat center center;
     background-size: contain;
     height: 150px;
-<<<<<<< HEAD
     position: relative; 
-=======
-    position: relative;
->>>>>>> origin
     /* 🚨 [핵심 버그 수정] 중앙 이미지가 커져도 위쪽 영역이 밀리거나 찌그러지지 않게 크기를 고정합니다. */
-    flex-shrink: 0;
+    flex-shrink: 0; 
 }
 
 .sub-center-img-area {
     width: 100%;
     flex: 1; /* flex-grow: 1과 함께 안정적인 공간 배분을 위해 단축 속성을 사용했습니다. */
-    min-height: 0;
+    min-height: 0; 
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .sub-center-img-area img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: contain; 
 }
 
 .sub-bottom {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(14, 59px);
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-
+    grid-template-columns: repeat(14, 59px); 
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 20px; 
+    
     /* 🚨 [핵심 버그 수정] 중앙 이미지가 커져도 버튼 영역이 밀리지 않게 크기를 고정합니다. */
-    flex-shrink: 0;
+    flex-shrink: 0; 
 }
 
 .sub-bottom .btn {
     width: 59px;
     height: 59px;
     border-radius: 10px;
-    /* ✏️ 호버 커서 이미지 경로: assets/cursor/cursor-pointer.png */
-    cursor:
-        url('./assets/cursor/cursor-pointer.png') 0 0,
-        pointer;
+    cursor: pointer;
 }
 
 .sub-bottom .btn img {
@@ -174,19 +153,7 @@ body {
 }
 
 @keyframes floating {
-<<<<<<< HEAD
     0% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
     100% { transform: translateY(0); }
-=======
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    100% {
-        transform: translateY(0);
-    }
->>>>>>> origin
 }
